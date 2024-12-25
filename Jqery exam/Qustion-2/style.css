@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    background-color: #444;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background-color: #555;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid #444;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+}

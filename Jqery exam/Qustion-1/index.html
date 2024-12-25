@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+<head>
+    <title>jQuery Accordion</title>
+  </head>
+<body>
+
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+       <h1>I Love JavaScript.</h1>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+      <h1>I Love Jquery.</h1>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <h1>I Love VueScript.</h1>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".accordion").click(function(){
+                $(this).next().slideToggle();
+            });
+        });
+    </script>
+
+</body>
+</html>
